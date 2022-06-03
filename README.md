@@ -185,13 +185,19 @@ Each function has a help documentation.
 **Note 2:** If no marker points coordinates (Zeiss_Init and DV_init)  and no conversion matrix (A) and vector (B) are given in allConversion, the function will use Zeiss_Init=ZEISS_ARRAY, DV_init=DV_ARRAY to compute the conversion matrix and vector.  
   
 ### Input:
+
   **path_to_dv_pts_file** str, define path toward the .pts file with the 20 fields coordinates on the DeltaVision.
+  
   **name_dv_pts_file** str,  name of .pts file with the 20 fields coordinates on the DeltaVision
+  
 **path_saved_zeiss_file** str, define path toward the folder where to save the output .csv file with the 20 fields coordinates in the DeltaVision and their converted coordinates in Zeiss.
+
 **name_saved_zeiss_file** str, define name of the .csv file with the 20 fields coordinates in the DeltaVision and their converted coordinates in Zeiss.
 
 **Optionnal**:
+
 **DV_init** numpy array,  DV maker points coordinates
+
 **Zeiss_init**  numpy array,  Zeiss corresponding maker points coordinates
 
 ### Output:  
@@ -218,12 +224,14 @@ $A=\begin{pmatrix}0 &c \\a&0\end{pmatrix}$ and $B=\begin{pmatrix}b \\d\end{pmatr
 
 
 ### Execution:  
+
 How to use DVtoZeiss.py  
 
 
 If you have only the file with DV coordinates for the 20 fields  :
 
 --> Import DVtoZeiss </span>
+
 --> Run DVtoZeiss.allConversion( path_to_dv_pts_file, name_dv_pts_file, path_saved_zeiss_file, name_saved_zeiss_file)  
 
 
@@ -231,6 +239,7 @@ If you have the file with DV coordinates for the 20 fields + a numpy array with 
 
 
 --> Import DVtoZeiss 
+
 --> Run DVtoZeiss.allConversion( Zeiss_init, DV_init, path_to_dv_pts_file, name_dv_pts_file, path_saved_zeiss_file, name_saved_zeiss_file)  
 
 
@@ -259,6 +268,7 @@ If you have the file with DV coordinates for the 20 fields + a numpy array with 
 - Matplotlib.
 
 ----------------**Global Variable**---------------  
+
 *DV_ARRAY*: numpy array, define the markers point coordinates in the DeltaVision.
 *ZEISS_ARRAY*: numpy array, define the markers point corresponding coordinates in the Zeiss.
   *PATH_TO_DV_PTS_FILE*: str, define path toward the .pts file with the 20 fields coordinates on the DeltaVision.
