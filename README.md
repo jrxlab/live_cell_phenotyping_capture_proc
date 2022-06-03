@@ -172,7 +172,7 @@ To increase the accuracy of the conversion, the more marker points on the Frame 
 
 ![figure_dr1-v4_step3details](step4linearreg.png)
 
-## DVtoZeiss.py explaination: 
+## DVtoZeiss.py explanation: 
 
   
 Each function has a help documentation.  
@@ -244,16 +244,6 @@ If you have the file with DV coordinates for the 20 fields + a numpy array with 
 
 
 
-
-
-  
-
-             
-
-  
-
-  
-
   
 
 ### Code structure:  
@@ -276,9 +266,6 @@ If you have the file with DV coordinates for the 20 fields + a numpy array with 
   *PATH_SAVED_ZEISS_FILE*: str, define path toward the folder where to save the output .csv file with the 20 fields coordinates in the DeltaVision and their converted coordinates in Zeiss.
   *NAME_SAVED_ZEISS_FILE*: str, define name of the .csv file with the 20 fields coordinates in the DeltaVision and their converted coordinates in Zeiss.
   
-  
-
-
   
 
   
