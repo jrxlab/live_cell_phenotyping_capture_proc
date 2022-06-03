@@ -42,7 +42,7 @@ This code creates a single label for each cell in the experiment, it ranks the c
 
 
 
-**Run** : The main function to run the code. It calls all the functions to run the script.
+**Traj_Proc** : The main function to run the code. It calls all the functions to run the script.
 
 **Read_csv_files** : Reads and organizes the .csv files. It merges all the fields in the same matrix to remodel the whole frame slide.
 
