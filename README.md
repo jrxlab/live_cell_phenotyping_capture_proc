@@ -235,7 +235,7 @@ If you have only the file with DV coordinates for the 20 fields  :
 --> Run DVtoZeiss.allConversion( path_to_dv_pts_file, name_dv_pts_file, path_saved_zeiss_file, name_saved_zeiss_file)  
 
 
-If you have the file with DV coordinates for the 20 fields + a numpy array with the DV coordinates of the maker points (DV_init _maker_points) and the numpy array of the corresponding coordinates in the Zeiss (Zeiss_init_maker_points)  
+If you have the file with DV coordinates for the 20 fields + a numpy array with the DV coordinates of the maker points (DV_init) and the numpy array of the corresponding coordinates in the Zeiss (Zeiss_init)  
 
 
 --> Import DVtoZeiss 
