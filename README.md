@@ -83,7 +83,7 @@ The .csv file name must be : ***field#.csv*** .
 "Point list coordinates can be incompatible between DeltaVision and Zeiss systems. A conversion of the point lists must be performed to locate the field of interest. To perform the conversion, coordinates must be obtained from both microscopes using the same FrameSlide marked with 4 points. (The points can be simply drawn with a fine marker.) The FrameSlide is mounted on each microscope as described above (with a clockwise 90° rotation between the DeltaVision and the Zeiss (see step 1 on  Figure_dr1_v3.pdf - Figure below)). The coordinates from both microscopes are recorded on a point list as described. The Zeiss microscope will flip the coordinates for display, according to a horizontal axe (step 2). The point lists will be used to determine the coefficients of a linear regression for both x and y coordinates of each point, that can then be applied to convert a point list from the DV to the PALM Zeiss setup. With the manual rotation of the FrameSlide and the Zeiss display flip, the yZeiss only depends on the xDV , and the xZeiss only depends on yDV (step3). A second round of this procedure can be repeated using cells instead of marker points in order to increase the accuracy of the conversion. " 
 
   
-`![figure_dr1-v4](steps.png)`
+![figure_dr1-v4](steps.png)
 
 
   
@@ -100,7 +100,7 @@ What we do if called a change of reference frame.
 
 As you rotate the slide frame to 90° clockwise, we have:   
 
-  `![figure_dr1-v4_step1](step1rotation.png)`
+  ![figure_dr1-v4_step1](step1rotation.png)
 
 
 
@@ -114,7 +114,7 @@ Zeiss display will flip the frame slide according to a horizontal axe like shown
 
   
 
-`![figure_dr1-v4_step2](step2flipZeiss.png)`
+![figure_dr1-v4_step2](step2flipZeiss.png)
 
   
 
@@ -126,7 +126,7 @@ The reference frames, and especially their origins, are not the same in the DV a
 
   
 
-`![figure_dr1-v4_step3](step3originschange.png)`
+![figure_dr1-v4_step3](step3originschange.png)
   
 
 we have chosen a linear relationship so:  
@@ -177,7 +177,7 @@ To increase the accuracy of the conversion, the more marker points on the Frame 
 
   
 
-`![figure_dr1-v4_step3details](step4linearreg.png)`
+![figure_dr1-v4_step3details](step4linearreg.png)
 
 ## DVtoZeiss.py explaination: 
 
