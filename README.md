@@ -260,11 +260,16 @@ If you have the file with DV coordinates for the 20 fields + a numpy array with 
 ----------------**Global Variable**---------------  
 
 *DV_ARRAY*: numpy array, define the markers point coordinates in the DeltaVision.
+
 *ZEISS_ARRAY*: numpy array, define the markers point corresponding coordinates in the Zeiss.
-  *PATH_TO_DV_PTS_FILE*: str, define path toward the .pts file with the 20 fields coordinates on the DeltaVision.
-  *NAME_DV_PTS_FILE*: str,  name of .pts file with the 20 fields coordinates on the DeltaVision.
-  *PATH_SAVED_ZEISS_FILE*: str, define path toward the folder where to save the output .csv file with the 20 fields coordinates in the DeltaVision and their converted coordinates in Zeiss.
-  *NAME_SAVED_ZEISS_FILE*: str, define name of the .csv file with the 20 fields coordinates in the DeltaVision and their converted coordinates in Zeiss.
+
+*PATH_TO_DV_PTS_FILE*: str, define path toward the .pts file with the 20 fields coordinates on the DeltaVision.
+
+*NAME_DV_PTS_FILE*: str,  name of .pts file with the 20 fields coordinates on the DeltaVision.
+
+*PATH_SAVED_ZEISS_FILE*: str, define path toward the folder where to save the output .csv file with the 20 fields coordinates in the DeltaVision and their converted coordinates in Zeiss.
+
+*NAME_SAVED_ZEISS_FILE*: str, define name of the .csv file with the 20 fields coordinates in the DeltaVision and their converted coordinates in Zeiss.
   
   
 
