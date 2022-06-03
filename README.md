@@ -220,7 +220,7 @@ $y_{Zeiss} = c.x_{DV}+ d$
 
 $\iff X_{Zeiss}=A.X_{DV} +B$
 with $X_{Zeiss}=\begin{pmatrix}x_{Zeiss} \\ y_{Zeiss}\end{pmatrix}$ , $X_{DV}=\begin{pmatrix}x_{DV} \\ y_{DV}\end{pmatrix}$, 
-$$A=\begin{pmatrix}0 & a \\$$ c & 0\end{pmatrix}$$  and  $$B=\begin{pmatrix}b \\$$ d\end{pmatrix}$$
+$A=\begin{pmatrix}0 & a \\ c & 0\end{pmatrix}$  and  $B=\begin{pmatrix}b \\ d\end{pmatrix}$
 
 
 ### Execution:  
