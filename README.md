@@ -37,7 +37,8 @@ This code creates a single label for each cell in the experiment, it ranks the c
 
 **Traj_Proc** : The main function to run the code. It calls all the functions to run the script.
 
-```def Traj_Proc():
+```
+def Traj_Proc():
     
     print("\nRead Files ...\n")
     experiment, time_vec, labels = Read_csv_files ()
@@ -56,7 +57,8 @@ This code creates a single label for each cell in the experiment, it ranks the c
     
     print("Done")
     
-    return experiment, time_vec,labels, mean_derivative```
+    return experiment, time_vec,labels, mean_derivative
+    ```
 
 
 **Read_csv_files** : Reads and organizes the .csv files. It merges all the fields in the same matrix to remodel the whole frame slide.
