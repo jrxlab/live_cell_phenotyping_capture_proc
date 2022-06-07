@@ -221,9 +221,8 @@ Each function has a help documentation.
 $y_{Zeiss} = c.x_{DV}+ d,$
 
 $\iff X_{Zeiss}=A.X_{DV} +B,$
-with $X_{Zeiss}=\begin{pmatrix}x_{Zeiss} \\ y_{Zeiss}\end{pmatrix}$ , $X_{DV}=\begin{pmatrix}x_{DV} \\ y_{DV}\end{pmatrix}$, 
-$A=\begin{pmatrix}0 & a \\ c & 0\end{pmatrix}$  and  $B=\begin{pmatrix}b \\ d\end{pmatrix}$
-
+with 
+![matriceAconversion](matrix_A_vector_B.png)
 
 ### Execution:  
 
@@ -252,7 +251,7 @@ If you have the file with DV coordinates for the 20 fields + a numpy array with 
 
   
 
-----------------**Requierements / import**--------------------------  
+----------------**Requierements / import**--------  
 
 - Numpy.
 - Scipy.
