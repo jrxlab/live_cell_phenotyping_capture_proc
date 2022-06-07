@@ -175,10 +175,10 @@ To increase the accuracy of the conversion, the more marker points on the Frame 
 ## DVtoZeiss.py explanation: 
 
   
-Each function has a help documentation.  
+Each function has a help documentation.  See DVtoZeiss main for the examples.
 
 
-**Note 1 :** If you know the conversion matrix and conversion vector of your two miscoscopes, please put them as input to the function allConversion.
+**Note 1 :** If you know the conversion matrix and conversion vector of your two microscopes, please put them as input to the function allConversion.
 
   
 
