@@ -37,6 +37,28 @@ This code creates a single label for each cell in the experiment, it ranks the c
 
 **Traj_Proc** : The main function to run the code. It calls all the functions to run the script.
 
+```def Traj_Proc():
+    
+    print("\nRead Files ...\n")
+    experiment, time_vec, labels = Read_csv_files ()
+    
+    print("\nProcess Trajectories ...\n")
+    experiment = Process_trajectories (experiment)
+    
+    print("Compute Mean Time Derivative ...\n")
+    mean_derivative = Compute_FRET_Derivative (experiment["process. Frame slide"])
+    
+    print("Sort Cells ...\n")
+    sorted_mean_deriv,sorted_labels = SortandSave_FRET_deriv (mean_derivative, labels)
+    
+    print ("Plot FRET Trajectories ...\n")
+    Plot_Top_Bottom_cells (experiment["process. Frame slide"],time_vec, labels,sorted_labels)
+    
+    print("Done")
+    
+    return experiment, time_vec,labels, mean_derivative```
+
+
 **Read_csv_files** : Reads and organizes the .csv files. It merges all the fields in the same matrix to remodel the whole frame slide.
 
 **Get_cell_labels** : This function create a unique label for each cell based on the field number and the cell number in the field : ***field#.cell#***  .
