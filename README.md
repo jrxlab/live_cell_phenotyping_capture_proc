@@ -233,17 +233,17 @@ How to use DVtoZeiss.py
 If you have only the file with DV coordinates for the 20 fields  :
 
 ```py
---> import DVtoZeiss
+>>> import DVtoZeiss
 
---> run DVtoZeiss.allConversion( path_to_dv_pts_file, name_dv_pts_file, path_saved_zeiss_file, name_saved_zeiss_file)  
+>>> run DVtoZeiss.allConversion( path_to_dv_pts_file, name_dv_pts_file, path_saved_zeiss_file, name_saved_zeiss_file)  
 ```
 
 If you have the file with DV coordinates for the 20 fields + a numpy array with the DV coordinates of the maker points (DV_init) and the numpy array of the corresponding coordinates in the Zeiss (Zeiss_init)  
 
 ```py
---> import DVtoZeiss 
+>>> import DVtoZeiss 
 
---> run DVtoZeiss.allConversion( Zeiss_init, DV_init, path_to_dv_pts_file, name_dv_pts_file, path_saved_zeiss_file, name_saved_zeiss_file)  
+>>> run DVtoZeiss.allConversion( Zeiss_init, DV_init, path_to_dv_pts_file, name_dv_pts_file, path_saved_zeiss_file, name_saved_zeiss_file)  
 ```
 
 
