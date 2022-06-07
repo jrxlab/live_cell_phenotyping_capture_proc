@@ -222,7 +222,7 @@ $y_{Zeiss} = c.x_{DV}+ d,$
 
 $\iff X_{Zeiss}=A.X_{DV} +B,$
 with 
-![matriceAconversion](matrix_A_vector_B.png)
+![matriceAconversion](matrice_A_vector_B.png)
 
 ### Execution:  
 
