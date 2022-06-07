@@ -230,7 +230,7 @@ with
 How to use DVtoZeiss.py  
 
 
-If you have only the file with DV coordinates for the 20 fields  :
+If you have only the file with DV coordinates for the 20 fields, the function will used our marker point coordinates to compute the conversion:
 
 ```py
 >>> import DVtoZeiss
@@ -246,7 +246,13 @@ If you have the file with DV coordinates for the 20 fields + a numpy array with 
 >>> DVtoZeiss.allConversion( Zeiss_init, DV_init, path_to_dv_pts_file, name_dv_pts_file, path_saved_zeiss_file, name_saved_zeiss_file)  
 ```
 
+If you have the file with DV coordinates for the 20 fields + the conversion matrix A and the conversion vector B:
 
+  ```py
+>>> import DVtoZeiss 
+
+>>> DVtoZeiss.allConversion( A,B,path_to_dv_pts_file, name_dv_pts_file, path_saved_zeiss_file, name_saved_zeiss_file)  
+```
   
 
 ### Code structure:  
