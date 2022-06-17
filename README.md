@@ -97,7 +97,7 @@ The .csv file name must be : ***field#.csv*** .
 
   
 
-"Point list coordinates can be incompatible between DeltaVision and Zeiss systems. A conversion of the point lists must be performed to locate the field of interest. To perform the conversion, coordinates must be obtained from both microscopes using the same FrameSlide marked with 4 points. (The points can be simply drawn with a fine marker.) The FrameSlide is mounted on each microscope as described above (with a clockwise 90° rotation between the DeltaVision and the Zeiss (see step 1 on the figure below)). The coordinates from both microscopes are recorded on a point list as described. The Zeiss microscope will flip the coordinates for display, according to a horizontal axe (step 2). The point list will be used to determine the coefficients of a linear regression for both x and y coordinates of each point, that can then be applied to convert any point list from the DV to the PALM Zeiss setup. With the manual rotation of the FrameSlide and the Zeiss display flip, the y<sub>Zeiss</sub> only depends on the x<sub>DV</sub> , and the x<sub>Zeiss</sub> only depends on y<sub>DV<s/ub> (step3). A second round of this procedure can be repeated using cells instead of marker points in order to increase the accuracy of the conversion. " 
+"Point list coordinates can be incompatible between DeltaVision and Zeiss systems. A conversion of the point lists must be performed to locate the field of interest. To perform the conversion, coordinates must be obtained from both microscopes using the same FrameSlide marked with 4 points. (The points can be simply drawn with a fine marker.) The FrameSlide is mounted on each microscope as described above (with a clockwise 90° rotation between the DeltaVision and the Zeiss (see step 1 on the figure below)). The coordinates from both microscopes are recorded on a point list as described. The Zeiss microscope will flip the coordinates for display, according to a horizontal axe (step 2). The point list will be used to determine the coefficients of a linear regression for both x and y coordinates of each point, that can then be applied to convert any point list from the DV to the PALM Zeiss setup. With the manual rotation of the FrameSlide and the Zeiss display flip, the y<sub>Zeiss</sub> only depends on the x<sub>DV</sub> , and the x<sub>Zeiss</sub> only depends on y<sub>DV</sub> (step3). A second round of this procedure can be repeated using cells instead of marker points in order to increase the accuracy of the conversion. " 
 
   
 ![figure_dr1-v4](steps.png)
@@ -206,39 +206,39 @@ Each function has a help documentation.  See DVtoZeiss main for the examples.
 
   
 
-**Note 2:** If no marker points coordinates (Zeiss_Init and DV_init)  and no conversion matrix (A) and vector (B) are given in allConversion, the function will use Zeiss_Init=ZEISS_ARRAY, DV_init=DV_ARRAY to compute the conversion matrix and vector.  
+**Note 2 :** If no marker points coordinates (Zeiss_Init and DV_init)  and no conversion matrix (A) and vector (B) are given in allConversion, the function will use Zeiss_Init=ZEISS_ARRAY, DV_init=DV_ARRAY to compute the conversion matrix and vector.  
   
 ### Input:
 
-  **path_to_dv_pts_file**: str, define path toward the .pts file with the 20 fields coordinates on the DeltaVision.
+  **path_to_dv_pts_file** : str, define path toward the .pts file with the 20 fields coordinates on the DeltaVision.
   
-  **name_dv_pts_file**: str,  name of .pts file with the 20 fields coordinates on the DeltaVision.
+  **name_dv_pts_file** : str,  name of .pts file with the 20 fields coordinates on the DeltaVision.
   
-**path_saved_zeiss_file**: str, define path toward the folder where to save the output .csv file with the 20 fields coordinates in the DeltaVision and their converted coordinates in Zeiss.
+**path_saved_zeiss_file** : str, define path toward the folder where to save the output .csv file with the 20 fields coordinates in the DeltaVision and their converted coordinates in Zeiss.
 
-**name_saved_zeiss_file**: str, define name of the .csv file with the 20 fields coordinates in the DeltaVision and their converted coordinates in Zeiss.
+**name_saved_zeiss_file** : str, define name of the .csv file with the 20 fields coordinates in the DeltaVision and their converted coordinates in Zeiss.
 
 **Optionnal** (see note 1 and 2):
 
-**DV_init**: numpy array,  DV maker points coordinates.
+**DV_init** : numpy array,  DV maker points coordinates.
 
-**Zeiss_init**:  numpy array,  Zeiss corresponding maker points coordinates.
+**Zeiss_init** :  numpy array,  Zeiss corresponding maker points coordinates.
 
 ### Output:  
 
 **Saved**: 
 
-1 - **name_saved_zeiss_file.csv**: CSV file with 4 columns and p rows (one per field in the Frame Slide, here 20) saved.   
+1 - **name_saved_zeiss_file.csv** : CSV file with 4 columns and p rows (one per field in the Frame Slide, here 20) saved.   
 
 **Return by the function**:
   
-1 - **combined_coordinates_system_pts_dataframe**: pandas dataframe with 4 columns (x_DV, y_DV, x_Zeiss, y_Zeiss) and p rows (one per field in the Frame Slide, here 20).
+1 - **combined_coordinates_system_pts_dataframe** : pandas dataframe with 4 columns (x_DV, y_DV, x_Zeiss, y_Zeiss) and p rows (one per field in the Frame Slide, here 20).
 
-2 - **A**: numpy array 2 x 2, Conversion matrix A.  
+2 - **A** : numpy array 2 x 2, Conversion matrix A.  
 
   
 
-3 - **B**: numpy array 2 x 1, Conversion vector B such that: 
+3 - **B** : numpy array 2 x 1, Conversion vector B such that: 
 
  $x_{Zeiss} = a.y_{DV}  + b,$
 
@@ -254,7 +254,7 @@ with
 How to use DVtoZeiss.py  
 
 
-If you have only the file with DV coordinates for the 20 fields, the function will used our marker point coordinates to compute the conversion:
+If you have only the file with DV coordinates for the 20 fields, the function will used our marker point coordinates to compute the conversion :
 
 ```py
 >>> import DVtoZeiss
@@ -262,7 +262,7 @@ If you have only the file with DV coordinates for the 20 fields, the function wi
 >>> DVtoZeiss.allConversion( path_to_dv_pts_file, name_dv_pts_file, path_saved_zeiss_file, name_saved_zeiss_file)  
 ```
 
-If you have the file with DV coordinates for the 20 fields + a numpy array with the DV coordinates of the maker points (DV_init) and the numpy array of the corresponding coordinates in the Zeiss (Zeiss_init)  
+If you have the file with DV coordinates for the 20 fields + a numpy array with the DV coordinates of the maker points (DV_init) and the numpy array of the corresponding coordinates in the Zeiss (Zeiss_init)  :
 
 ```py
 >>> import DVtoZeiss 
@@ -270,7 +270,7 @@ If you have the file with DV coordinates for the 20 fields + a numpy array with 
 >>> DVtoZeiss.allConversion( Zeiss_init, DV_init, path_to_dv_pts_file, name_dv_pts_file, path_saved_zeiss_file, name_saved_zeiss_file)  
 ```
 
-If you have the file with DV coordinates for the 20 fields + the conversion matrix A and the conversion vector B:
+If you have the file with DV coordinates for the 20 fields + the conversion matrix A and the conversion vector B :
 
   ```py
 >>> import DVtoZeiss 
@@ -292,17 +292,17 @@ If you have the file with DV coordinates for the 20 fields + the conversion matr
 
 ----------------**Global Variable**---------------  
 
-*DV_ARRAY*: numpy array, define the markers point coordinates in the DeltaVision.
+*DV_ARRAY* : numpy array, define the markers point coordinates in the DeltaVision.
 
-*ZEISS_ARRAY*: numpy array, define the markers point corresponding coordinates in the Zeiss.
+*ZEISS_ARRAY* : numpy array, define the markers point corresponding coordinates in the Zeiss.
 
-*PATH_TO_DV_PTS_FILE*: str, define path toward the .pts file with the 20 fields coordinates on the DeltaVision.
+*PATH_TO_DV_PTS_FILE* : str, define path toward the .pts file with the 20 fields coordinates on the DeltaVision.
 
-*NAME_DV_PTS_FILE*: str,  name of .pts file with the 20 fields coordinates on the DeltaVision.
+*NAME_DV_PTS_FILE* : str,  name of .pts file with the 20 fields coordinates on the DeltaVision.
 
-*PATH_SAVED_ZEISS_FILE*: str, define path toward the folder where to save the output .csv file with the 20 fields coordinates in the DeltaVision and their converted coordinates in Zeiss.
+*PATH_SAVED_ZEISS_FILE* : str, define path toward the folder where to save the output .csv file with the 20 fields coordinates in the DeltaVision and their converted coordinates in Zeiss.
 
-*NAME_SAVED_ZEISS_FILE*: str, define name of the .csv file with the 20 fields coordinates in the DeltaVision and their converted coordinates in Zeiss.
+*NAME_SAVED_ZEISS_FILE* : str, define name of the .csv file with the 20 fields coordinates in the DeltaVision and their converted coordinates in Zeiss.
   
   
 
@@ -315,32 +315,32 @@ If you have the file with DV coordinates for the 20 fields + the conversion matr
 **See function help for more information.** 
 
 
-**computeLinearCoefficientDVtoZeiss**: Compute the linear coefficients of the linear regression to translate the coordinates used in DeltaVision into the corresponding coordinates on the Zeiss.
+**computeLinearCoefficientDVtoZeiss** : Compute the linear coefficients of the linear regression to translate the coordinates used in DeltaVision into the corresponding coordinates on the Zeiss.
 
-**computeZeissCoordinatesFromDVcoordinates**: Compute the linear coefficients of the linear regression to translate the coordinates used in DeltaVision into the corresponding coordinates on the Zeiss by using DV_init (numpy array with the DV coordinates of the marker points) and Zeiss_Init (numpy array with the Zeiss corresponding coordinates of the marker points)
+**computeZeissCoordinatesFromDVcoordinates** : Compute the linear coefficients of the linear regression to translate the coordinates used in DeltaVision into the corresponding coordinates on the Zeiss by using DV_init (numpy array with the DV coordinates of the marker points) and Zeiss_Init (numpy array with the Zeiss corresponding coordinates of the marker points)
     or, if the conversion matrix  A and the conversion vector B are defined, use A and B  
     to compute the translation for the DV point in DV.
     
-  **openDVptsFile**: takes as input the path to the DV .pts and returns a dataframe of the DV x,y,z coordinates.
+ **openDVptsFile** : takes as input the path to the DV .pts and returns a dataframe of the DV x,y,z coordinates.
   
-**plotFrameSlide**: plot the Frame slide in 2D with all the point in coordinate_array on ax subplot if defined, if not create the figure.
+**plotFrameSlide** : plot the Frame slide in 2D with all the point in coordinate_array on ax subplot if defined, if not create the figure.
 
-**plotCoordinatesConversion**: plot the Frame slide in 2D with all the point in the DV and in the Zeiss in a 2-subplots figures.
+**plotCoordinatesConversion** : plot the Frame slide in 2D with all the point in the DV and in the Zeiss in a 2-subplots figures.
 
-**allConversion**: Compute the conversion matrix A and the conversion vector B to convert the DV coordinates into the Zeiss corresponding coordinates by using the markers points coordinates arrays. Return a panda dataframe with the DV coordinates from the .pts file of the 20 fields of the FrameSlide and the corresponding coordinates in the Zeiss, save this dataframe into a .csv and return also A and B.
+**allConversion** : Compute the conversion matrix A and the conversion vector B to convert the DV coordinates into the Zeiss corresponding coordinates by using the markers points coordinates arrays. Return a panda dataframe with the DV coordinates from the .pts file of the 20 fields of the FrameSlide and the corresponding coordinates in the Zeiss, save this dataframe into a .csv and return also A and B.
 
  
 ----------------**Main/ Function tests**--------  
 
   
 
-**Test conversion:**  
+**Test conversion** :  
 
 Compute convertion matrix and then apply the convertion  on the DV points obtained with the marker on the FrameSlide.   
 
   
 
-**All conversion steps:** 
+**All conversion steps** :
 
 <ol> 
 
@@ -372,7 +372,7 @@ Compute convertion matrix and then apply the convertion  on the DV points obtain
 
   
 
-**Complete pipeline inside one function:**  
+**Complete pipeline inside one function**  : 
 
   
 
