@@ -190,7 +190,7 @@ x<sup>2</sup><sub>Zeiss</sub> =c . y2<sup>2</sup><sub>DV</sub> + d,
 
   
 
-To increase the accuracy of the conversion, the more marker points on the Frame Slide, the better. But as soon as we have more values than unknown variables, the system becomes over-determined. To overcome this issue, instead of using solve to find a,b,c and d, we use a least-square method (lstsq of the scipy.linalg package) to find the best linear relation between all the x<sup>i</sup><sub>DV</sub> and the y<sup>i</sup><sub>Zeiss</sub>, and all the y<sup>i</sup><sub>DV</sub> and the x<sup>i</sup><sub>Zeiss</sub> , $ 1 \leq i \leq 5 $  in the example:   
+To increase the accuracy of the conversion, the more marker points on the Frame Slide, the better. But as soon as we have more values than unknown variables, the system becomes over-determined. To overcome this issue, instead of using solve to find a,b,c and d, we use a least-square method (lstsq of the scipy.linalg package) to find the best linear relation between all the x<sup>i</sup><sub>DV</sub> and the y<sup>i</sup><sub>Zeiss</sub>, and all the y<sup>i</sup><sub>DV</sub> and the x<sup>i</sup><sub>Zeiss</sub> , $1 \leq i \leq 5$  in the example:   
 
   
 
