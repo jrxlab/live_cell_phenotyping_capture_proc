@@ -1,4 +1,5 @@
 # Live Cell Phenotyping Capture Procedure 
+*presented in the protocol for fate-seq [(Bian et al., STAR Protocols 2022)](https://star-protocols.cell.com)*
 
 **Authors :** Asma Chalabi, Marielle Péré. Code developed in the [**Roux lab**](https://github.com/jrxlab)  
 
