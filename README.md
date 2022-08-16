@@ -13,7 +13,7 @@ This code creates a single label for each cell in the experiment, it ranks the c
 
 ### Code structure
 
-#### Requierment
+#### Requirement
 
 - Numpy.
 - Scipy.
