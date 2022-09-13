@@ -1,6 +1,6 @@
 # Live Cell Phenotyping Capture Procedure 
 
-**Authors :** Asma Chalabi, Marielle Péré. Code developed in the [**Roux lab**](https://github.com/jrxlab), presented in the protocol for fate-seq ([Bian *et al.*, STAR Protocols 2022](https://star-protocols.cell.com/protocols/1916)).  
+**Authors :** Asma Chalabi, Marielle Péré. Code developed in the [**Roux lab**](https://github.com/jrxlab), presented in the protocol for fate-seq ([Bian B, Paquet A *et al.*, STAR Protoc. 2022 Aug 18](https://star-protocols.cell.com/protocols/1916)).  
 
 **Note :** This code has been developed under Python >= 3.8 .
 
